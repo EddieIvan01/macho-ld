@@ -1,0 +1,19 @@
+[package]
+name = "macho-ld"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libc = "0.2"
+modular-bitfield = "0.11.2"
+
+[build-dependencies]
+cc = "1.0"
+
+[profile.dev]
+overflow-checks = false
+
+[profile.release]
+overflow-checks = false
